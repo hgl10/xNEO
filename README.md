@@ -8,9 +8,9 @@
 
 xNEO接口还不稳定，稳定后会发布v1版本(release)。
 
-## xNEO
+## xNEO-48
 
-![xNEO](./images/xNEO.png)
+![xNEO](./images/xNEO-48.png)
 
 1. USBC 供电；
 2. DIP48，双单排针，排内100mil间距，双排间距1000mil；
@@ -23,11 +23,9 @@ xNEO接口还不稳定，稳定后会发布v1版本(release)。
   - 建议：如果有空间，板载运放缓冲（100Ω和1nF阻容负载）；
   - 建议：运放前级预留上拉电阻（方便测试PT1000等）；
 
-## xNEO-S
+## xNEO-24
 
-![xNEO-S](./images/xNEO-S.png)
-
-S means Small.
+![xNEO-S](./images/xNEO-24.png)
 
 1. USBC 供电；
 2. DIP24，双单排针，排内100mil间距，双排间距700mil；
