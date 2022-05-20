@@ -1,6 +1,6 @@
 # xNeo 规范
 
-[天在水](heguolin@mail.iee.ac.cn)@2022/05/19
+[天在水](heguolin@mail.iee.ac.cn)@2022/05/20
 
 ## 目标
 
