@@ -1,11 +1,10 @@
 # xNeo 规范
 
-[天在水](heguolin@mail.iee.ac.cn)@2022/06/17
+[天在水](heguolin@mail.iee.ac.cn)@2022/06/30
 
 ## 目标
 
 设计一种方便电控平台实验的新的PCB布局规范(PCB specs for motor control)，以高效率的进行PCB的设计和复用。
-
 xNEO接口还不稳定，稳定后会发布v1版本(release)。
 
 ## xNEO(xNEO-48)
@@ -38,28 +37,27 @@ xNEO接口还不稳定，稳定后会发布v1版本(release)。
    - 建议：如果有空间，板载运放缓冲（100Ω和1nF阻容负载）；
    - 建议：运放前级预留上拉电阻（方便测试PT1000等）；
 
+## xNEO-32
+
+![xNEO](./images/xNEO-32.png)
+
+1. USBC 供电；
+2. DIP32，双单排针，排内100mil间距，双排间距800mil；
+3. I2C上拉5.1k；
+4. 板载两个2 BTN(BOOT/USER BTN, nRST BTN)，一个电源LED；
+5. 建议：板载CAN通信(可以不隔离,兼容CAN 2.0B)的PHY芯片；
+6. 7个ADC引脚（A0-A6）：
+   - 建议：尽量保证(A1, A2), (A3, A4), (A5, A6)可以进行同步采样；
+   - 建议：如果支持差分，尽量保证(A1, A2), (A3, A4), (A5, A6)可以进行差分采样；
+   - 建议：如果有空间，板载运放缓冲（100Ω和1nF阻容负载）；
+   - 建议：运放前级预留上拉电阻（方便测试PT1000等）；
+
 ## xNEO-24
 
 ![xNEO](./images/xNEO-24.png)
 
 1. USBC 供电；
-2. DIP24，双单排针，排内100mil间距，双排间距600mil；
-3. I2C上拉5.1k；
-4. 板载两个2 BTN(BOOT/USER BTN, nRST BTN)，一个电源LED；
-5. 建议：板载CAN通信(可以不隔离,兼容CAN 2.0B)的PHY芯片；
-6. 3个ADC引脚：
-   - 建议：尽量保证(A1, A2)可以进行同步采样；
-   - 建议：如果支持差分，尽量保证(A1, A2)可以进行差分采样；
-   - 建议：板载运放缓冲（100Ω和1nF阻容）；
-   - 建议：运放前级预留上拉电阻（方便测试PT1000等）；
-
-
-## xNEO-20
-
-![xNEO](./images/xNEO-20.png)
-
-1. USBC 供电；
-2. DIP20，双单排针，排内100mil间距，双排间距600mil；
+2. DIP24，双单排针，排内100mil间距，双排间距700mil；
 3. I2C上拉5.1k；
 4. 板载两个2 BTN(BOOT/USER BTN, nRST BTN)，一个电源LED；
 5. 建议：板载CAN通信(可以不隔离,兼容CAN 2.0B)的PHY芯片；
@@ -76,7 +74,7 @@ xNEO接口还不稳定，稳定后会发布v1版本(release)。
 
 1. USBC 供电；
 2. DIP16，双单排针，排内100mil间距，双排间距600mil；
-3. I2C上拉5.1k；
+3. 取消I2C，保留串口；
 4. 板载两个2 BTN(BOOT/USER BTN, nRST BTN)，一个电源LED；
 5. 建议：板载CAN通信(可以不隔离,兼容CAN 2.0B)的PHY芯片；
 6. 3个ADC引脚：
